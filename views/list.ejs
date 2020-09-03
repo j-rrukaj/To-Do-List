@@ -1,0 +1,35 @@
+<%- include("header") -%>
+
+<!-- Adds a EJS marker which places a specific variable such as theDay -->
+  <div class="box" id="heading">
+    <h1> <%= listTitle %> </h1>
+  </div>
+
+
+  <div class="box">
+    <!-- add sniplets tags to be able to run control flow using ejs. For loop to run -->
+
+    <!-- Once a note gets pushed in the notes array. The For loop will trigger because the notes.length will be 1.
+  As more notes get created the Loop contiunes to run.  -->
+
+    <% for (var i=0; i<notes.length; i++) { %>
+
+    <div class="item">
+      <input type="checkbox">
+      <p><%= notes[i] %></p>
+    </div>
+
+    <%  }; %>
+
+
+<!-- Stores inputs "newItem" which we use bodyParser to retrieve. -->
+<!-- If statement in app.js. If the name: list is equal to value = listTitle redirect the user to the right page and input the new note -->
+    <form class="item" action="/" method="post">
+      <input type="text" name="newItem" placeholder="Type Here" autocomplete="off">
+      <button type="submit" name="list" value= <%= listTitle %>  >+</button>
+    </form>
+
+
+  </div>
+
+  <%- include("footer") -%>

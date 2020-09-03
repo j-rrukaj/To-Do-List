@@ -1,0 +1,107 @@
+html {
+  background-color: #ff7171;
+  background-image: -webkit-linear-gradient(75deg, #ff7171 50%, #f7f2e7 50%);
+  min-height: 1000px;
+  font-family: 'helvetica neue';
+}
+
+h1 {
+  color: #fff;
+  padding: 10px;
+}
+
+h2 {
+  text-align: center;
+}
+
+.box {
+  max-width: 400px;
+  margin: 50px auto;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+}
+
+#heading {
+  background-color: #ff7171;
+  text-align: center;
+}
+
+.item {
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #F1F1F1;
+  word-wrap: break-word;
+}
+
+.item:last-child {
+  border-bottom: 0;
+}
+
+/* Select all <p> elements that are straight after the input element. */
+input:checked+p {
+  text-decoration: line-through;
+  text-decoration-color: #ff7171;
+}
+
+/* Targets an input which has the type of checkbox */
+input[type="checkbox"] {
+  margin: 20px;
+}
+
+p {
+  margin: 0;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: 200;
+  color: #00204a;
+  word-wrap: break-word;
+}
+
+form {
+  text-align: center;
+  margin-left: 20px;
+}
+
+button {
+  min-height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border-color: transparent;
+  background-color: #ff7171;
+  color: #fff;
+  font-size: 30px;
+  padding-bottom: 6px;
+  border-width: 0;
+}
+
+/* Targets an input which has the type of text instead of checkbox */
+input[type="text"] {
+  text-align: center;
+  height: 60px;
+  top: 10px;
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  font-weight: 200;
+  width: 313px;
+}
+
+/* When user clicks on placeholder an underline appears at the bottom. */
+input[type="text"]:focus {
+  outline: none;
+  box-shadow: inset 0 -3px 0 0 #ff7171;
+}
+
+/* The ::placeholder CSS pseudo-element represents the placeholder text in an <input> */
+::placeholder {
+  color: grey;
+  opacity: 1;
+}
+
+footer {
+  color: white;
+  color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
